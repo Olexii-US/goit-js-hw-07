@@ -5,9 +5,11 @@ console.log(galleryItems);
 
 const galleryBox = document.querySelector('.gallery')
 
-const markupGallery = galleryItems.map(({preview,original, description}) => `<a class="gallery__item" href="${original}">
+const markupGallery = galleryItems.map(({ preview, original, description }) => `<li>
+<a class="gallery__item" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
-</a>`   
+</a>
+</li>`  
 ).join('')
 
 galleryBox.innerHTML = markupGallery
